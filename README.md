@@ -15,12 +15,12 @@ Vanilla Go uses nesting, which can become hard to read:
 
 ```Go
 // hard to read. inside-out execution order
-http.Handle("/", Logger(Auth(myHandler)))
+http.Handle("/", MiddlewareThree(MiddlewareTwo(MiddlewareOne(myHandler))))
 ```
 
 Go + Daisy is readable and easy to use:
 
 ```Go
 // easy to read. reads left-to-right
-http.Handle("/", daisy.chain(Auth, Logger).To(myHandler))
+http.Handle("/", daisy.chain(MiddlewareOne, MiddlewareTwo, MiddlewareThree).To(myHandler))
 ```
