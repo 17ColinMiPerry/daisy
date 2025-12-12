@@ -1,5 +1,6 @@
-# Daisy is a lightweight + zero dependency middleware chainer for `net/http`
+# Daisy
 
+Daisy is a lightweight + zero dependency middleware chainer for `net/http`
 Syntax is meant to be extremely readable, following a first-in first-executed pattern
 
 ## Installation
